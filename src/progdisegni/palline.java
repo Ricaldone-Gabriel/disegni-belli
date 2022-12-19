@@ -102,7 +102,7 @@ public class palline extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Graphics grafica = jPanel2.getGraphics();
-        int pallineTot = 101;
+        int pallineTot = 5000;
         Pallina[] palline = new Pallina[pallineTot];
 
         for (int i = 0; i < pallineTot; i++) {
@@ -112,8 +112,8 @@ public class palline extends javax.swing.JFrame {
         do {
             int delay = 1;
 
-            grafica.setColor(new Color(204, 204, 204));
-            if (pallineTot <= 100) {
+            grafica.setColor(new Color(190, 204, 204));
+            if (pallineTot <= 1500) {
                 for (int i = 0; i < pallineTot; i++) {
                     grafica.fillOval(palline[i].getX(), palline[i].getY(), palline[i].getWidth(), palline[i].getHeight());
                 }
@@ -138,7 +138,7 @@ public class palline extends javax.swing.JFrame {
                grafica.fillOval(palline[i].getX(),palline[i].getY(),palline[i].getWidth(),palline[i].getHeight()); 
             }
             
-            Thread.sleep(delay + 20);
+            Thread.sleep(delay + 10);
         } while (true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
